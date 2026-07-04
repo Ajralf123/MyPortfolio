@@ -1,0 +1,14 @@
+<h4>Tech stack:</h4>
+<div class="tech-stack-container">
+  <div class="tech-stack">
+    <span class="fc-icon">💻</span>
+    <h3 class="fc-title">HTML & CSS</h3>
+    <p class="fc-text">Building responsive layouts with semantic structure and polished styles.</p>
+  </div>
+
+  <div class="tech-stack">
+    <span class="fc-icon">⚙️</span>
+    <h3 class="fc-title">JavaScript</h3>
+    <p class="fc-text">Interactive features, animations, and dynamic content handling.</p>
+  </div>
+</div>
