@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const zeroAngle = vertical === 'up' ? 90 : 270;
     const tiltSign  = horizontal === 'left' ? -1 : 1;
-    const radius = 140;
+    const radius = 135;
     const originX = horizontal === 'left' ? 'right' : 'left';
     const n = fanItems.length;
 

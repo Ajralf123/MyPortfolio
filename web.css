@@ -191,7 +191,13 @@ section { padding: var(--sp-3xl) var(--sp-xl); }
 .hero_content {
   position: relative;
   z-index: 1;
-  max-width: 720px;
+  width: 100%;
+  max-width: 1040px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: var(--sp-2xl);
+  text-align: left;
   animation: heroFadeUp 0.9s var(--ease) both;
 }
 
@@ -254,8 +260,23 @@ section { padding: var(--sp-3xl) var(--sp-xl); }
 .hero_cta {
   display: flex;
   gap: var(--sp-md);
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
+}
+
+.myphoto {
+  display: flex;
+  justify-content: center;
+}
+
+.myphoto img {
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 4px solid var(--clr-surface);
+  box-shadow: var(--shadow-lg);
 }
 
 .btn {
@@ -786,12 +807,9 @@ section { padding: var(--sp-3xl) var(--sp-xl); }
   .section-title { font-size: clamp(1.6rem, 8vw, 2.2rem); }
 }
 
-@media (max-width: 240px) {
-  .tech-inner { grid-template-columns: 1fr 1fr; }
-  .hero_cta { flex-direction: column; align-items: stretch; }
-  .btn { text-align: center; }
-  .contact-links { flex-direction: column; align-items: center; }
-  .section-title { font-size: clamp(1.6rem, 8vw, 2.2rem); }
+@media (max-width: 30px) {
+  .tech-inner { grid-template-columns: 1fr; }
+  
 }
 
 /* ── 13. FAN NAV (MOBILE, DRAGGABLE) ───────────────────── */
@@ -899,6 +917,19 @@ section { padding: var(--sp-3xl) var(--sp-xl); }
 .fan-menu li:nth-child(6) a { transition-delay: 0.17s; }
 
 @media (max-width: 768px) {
+  .hero_content {
+  grid-template-columns: 1fr;
+  text-align: center;
+  gap: var(--sp-xl);
+}
+
+.hero_cta {
+  justify-content: center;
+}
+
+.myphoto img {
+  max-width: 220px;
+}
   .fan-root { display: block; }
 }
 
