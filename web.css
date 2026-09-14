@@ -775,6 +775,7 @@ section { padding: var(--sp-3xl) var(--sp-xl); }
   transform: rotate(90deg);
 }
 
+
 /* ── 12. RESPONSIVE ────────────────────────────────────── */
 @media (max-width: 1024px) {
   .about-inner { grid-template-columns: 1fr; }
@@ -937,4 +938,37 @@ section { padding: var(--sp-3xl) var(--sp-xl); }
   .fan-toggle, .fan-menu a, .fan-scrim, .fan-toggle .bars span {
     transition-duration: 0.01ms !important;
   }
+}
+
+
+/* ── DESIGN WORK ───────────────────────────────────────── */
+.design { background: var(--clr-bg); }
+
+.design-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-lg);
+  max-width: var(--max-w);
+  margin-inline: auto;
+}
+
+.design-card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-sm);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+
+.design-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.design-card .project-demo { height: 160px; }
+
+@media (max-width: 1024px) {
+  .design-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .design-grid { grid-template-columns: 1fr; }
 }
